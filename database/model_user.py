@@ -14,7 +14,6 @@ class ModelUser(Document):
 
     meta = {"collection": "user"}
 
-    # 微信唯一id
     id = StringField(primary_key=True)
     _in_time = StringField(required=True, default=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     _utime = StringField(required=True, default=datetime.now().strftime("%Y-%m-%d %H:%M:%S"))

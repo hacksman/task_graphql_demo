@@ -15,6 +15,7 @@ from datetime import datetime
 class ModelTask(Document):
 
     meta = {"collection": "task"}
+
     _in_time = StringField(default=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), required=True)
     _utime = StringField(default=datetime.now().strftime("%Y-%m-%d %H:%M:%S"), required=True)
     task = StringField(default="", required=True)
